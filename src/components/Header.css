@@ -1,0 +1,8 @@
+.ui.segment:first-child {
+    margin-bottom: 0;
+}
+
+.ui.huge.header {
+    font-size: 4em;
+}
+
