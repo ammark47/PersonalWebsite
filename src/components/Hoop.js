@@ -4,11 +4,15 @@
 import React, { Component, PropTypes } from 'react';
 import basketball_hoop from './images/basketball_hoop.jpeg'
 import { Button, Card, Image, Icon } from 'semantic-ui-react'
-import { ItemTypes } from './Constants/Constants';
+import  ItemTypes  from './Constants/Constants';
 import { DropTarget } from 'react-dnd';
 
 
 const hoopTarget = {
+    canDrop(props) {
+        return {}
+    },
+
     drop(props) {
         console.log("dropped here");
     }

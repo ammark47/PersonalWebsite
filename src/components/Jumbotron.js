@@ -8,6 +8,8 @@ import basketball from './images/basketball.png'
 import gymbackground from './images/gym_background.jpg'
 import './Jumbotron.css';
 import Basketball from './Basketball';
+import CustomDragLayer from './CustomDragLayer'
+import DraggableBasketball from './Basketball'
 
 
 
@@ -18,7 +20,8 @@ const ImageExampleCircular = () => (
             <div className="sixteen wide column"  id="back">
 
             </div>
-            <Basketball />
+            <Basketball/>
+            <CustomDragLayer isDragging=""/>
         </div>
 
     </div>
