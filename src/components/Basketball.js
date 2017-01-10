@@ -13,6 +13,7 @@ import dragged_basketball from './images/dragged_basketball.jpeg';
 const ballSource = {
     beginDrag(props) {
 
+        return { };
     }
 };
 
