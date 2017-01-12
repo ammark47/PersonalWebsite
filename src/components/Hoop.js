@@ -1,66 +1,37 @@
 /**
  * Created by ammar on 1/8/2017.
  */
-import React, { Component, PropTypes } from 'react';
-import basketball_hoop from './images/basketball_hoop.jpeg'
-import { Button, Card, Image, Icon } from 'semantic-ui-react'
-import  ItemTypes  from './Constants/Constants';
-import { DropTarget } from 'react-dnd';
-
-
-const hoopTarget = {
-    canDrop(props) {
-        return {}
-    },
-
-    drop(props) {
-        console.log("dropped here");
-    }
-};
-
-function collect(connect, monitor) {
-    return {
-        connectDropTarget: connect.dropTarget(),
-        isOver: monitor.isOver()
-    };
-}
-
+import React from 'react';
+import { Card, Icon } from 'semantic-ui-react'
+import TargetHoop from './TargetHoop'
 
 class Hoop extends React.Component {
     render() {
-
-        const { connectDropTarget, isOver } = this.props;
-        return connectDropTarget(
-            <div className="column">
-                <Card >
-                    <Image src={basketball_hoop}/>
+        const { projectname, projectdate, projecttools, projectdescript } = this.props;
+        return (
+                <Card className="column" id="hoop">
+                    <TargetHoop isOver="" projectname={projectname}/>
                     <Card.Content>
                         <Card.Header>
-                            Matthew
+                            {projectname}
                         </Card.Header>
                         <Card.Meta>
                         <span className='date'>
-                          Joined in 2015
+                            {projectdate}
                         </span>
                         </Card.Meta>
                         <Card.Description>
-                            Matthew is a musician living in Nashville.
+                            {projectdescript}
                         </Card.Description>
                     </Card.Content>
                     <Card.Content extra>
                         <a>
-                            <Icon name='user'/>
-                            22 Friends
+                            {projecttools}
                         </a>
                     </Card.Content>
                 </Card>
-            </div>
         );
     }
 }
 
-Hoop.propTypes = {
-    isOver: PropTypes.bool.isRequired
-};
-
-export default DropTarget(ItemTypes.BASKETBALL, hoopTarget, collect)(Hoop);
+export default Hoop

@@ -8,7 +8,7 @@ import basketball from './images/basketball1.jpg'
 import ItemTypes from './Constants/Constants';
 import { DragSource } from 'react-dnd';
 import { getEmptyImage } from 'react-dnd-html5-backend';
-import dragged_basketball from './images/dragged_basketball.jpeg';
+
 
 const ballSource = {
     beginDrag(props) {

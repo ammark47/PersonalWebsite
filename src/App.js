@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import basketball from './components/images/basketball.png'
 import './App.css';
 import HeaderExampleFloating from './components/Header';

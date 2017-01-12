@@ -1,9 +1,8 @@
 /**
  * Created by ammar on 1/9/2017.
  */
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import ItemTypes from './Constants/Constants';
-import Basketball from './Basketball'
 import { Image } from 'semantic-ui-react'
 import { DragLayer } from 'react-dnd';
 import dragged_basketball from './images/dragged_basketball1.jpeg'
@@ -18,11 +17,24 @@ const layerStyles = {
     height: '100%'
 };
 
+function getItemStyles(props) {
+    const { currentOffset } = props;
+    if (!currentOffset) {
+        return {
+            display: 'none'
+        };
+    }
+
+    const { x, y } = currentOffset;
+    const transform = `translate(${x}px, ${y}px)`;
+    return {
+        transform: transform,
+        WebkitTransform: transform
+    };
+}
+
 
  class CustomDragLayer extends React.Component {
-     static propTypes = {
-         isDragging: PropTypes.bool.isRequired,
-     };
 
     renderItem(type) {
         switch (type) {
@@ -43,11 +55,23 @@ const layerStyles = {
 
         return (
             <div style={layerStyles}>
+                <div style={getItemStyles(this.props)}>
                     {this.renderItem(itemType)}
+                </div>
             </div>
         );
     }
 }
+
+CustomDragLayer.propTypes = {
+    itemType: PropTypes.string,
+    currentOffset: PropTypes.shape({
+        x: PropTypes.number.isRequired,
+        y: PropTypes.number.isRequired
+    }),
+    isDragging: PropTypes.bool.isRequired
+};
+
 
 
 function collect(monitor) {

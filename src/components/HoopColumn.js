@@ -1,12 +1,11 @@
 /**
  * Created by ammar on 1/8/2017.
  */
-import React, { Component, PropTypes } from 'react';
-import basketball_hoop from './images/basketball_hoop.jpeg'
-import { Button, Card, Image, Icon } from 'semantic-ui-react'
-import { ItemTypes } from './Constants/Constants';
-import { DropTarget } from 'react-dnd';
+import React from 'react';
+import {  Card } from 'semantic-ui-react'
 import Hoop from './Hoop';
+import  SquadStreamInfo  from './Constants/SquadStreamConstants/SquadStreamConstants';
+
 
 
 class HoopColumn extends React.Component {
@@ -15,7 +14,12 @@ class HoopColumn extends React.Component {
         return (
             <div className="ui equal width grid">
                 <Card.Group className="equal width row">
-                    <Hoop isOver=""/>
+                    <Hoop isOver=""
+                          projectname={SquadStreamInfo.NAME}
+                          projectdate={SquadStreamInfo.DATE}
+                          projecttools={SquadStreamInfo.TOOLS}
+                          projectdescript={SquadStreamInfo.DESCRIPT}
+                    />
                     <Hoop isOver=""/>
                     <Hoop isOver=""/>
                 </Card.Group>
