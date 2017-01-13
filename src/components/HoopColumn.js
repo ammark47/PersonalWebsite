@@ -12,7 +12,7 @@ class HoopColumn extends React.Component {
     render() {
 
         return (
-            <div className="ui equal width grid">
+            <div className="ui equal width grid" name="hoopColumns">
                 <Card.Group className="equal width row">
                     <Hoop isOver=""
                           projectname={SquadStreamInfo.NAME}

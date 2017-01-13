@@ -7,14 +7,31 @@ import { Image } from 'semantic-ui-react'
 import { PropTypes } from 'react';
 import basketball from './images/basketball1.jpg'
 import ItemTypes from './Constants/Constants';
+import Scroll from 'react-scroll';
 import { DragSource } from 'react-dnd';
 import { getEmptyImage } from 'react-dnd-html5-backend';
 
 
 const ballSource = {
-    beginDrag(props) {
+    beginDrag(props, monitor, component) {
+        var Element = Scroll.Element;
+        var scroll = Scroll.animateScroll;
 
-        return { };
+        scroll.scrollTo(600, {
+            duration: 1500,
+            delay: 100,
+            smooth: true,
+        });
+
+        component.test();
+        return {};
+
+    },
+    isDragging(props, monitor){
+        var Element = Scroll.Element;
+        var scroller = Scroll.scroller;
+
+        return true;
     },
     endDrag(props, monitor, component) {
         // console.log("end drag " + monitor.didDrop());
@@ -54,6 +71,10 @@ function collect(connect, monitor) {
             // when it already knows it's being dragged so we can hide it with CSS.
             captureDraggingState: true
         });
+    }
+
+    test(){
+        console.log("hello");
     }
 
     render(){

@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a2891e0-b68e-4352-9693-3f83b9649904" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Basketball.js" afterPath="$PROJECT_DIR$/src/components/Basketball.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Header.js" afterPath="$PROJECT_DIR$/src/components/Header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Hoop.js" afterPath="$PROJECT_DIR$/src/components/Hoop.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HoopColumn.js" afterPath="$PROJECT_DIR$/src/components/HoopColumn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Jumbotron.css" afterPath="$PROJECT_DIR$/src/components/Jumbotron.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Jumbotron.js" afterPath="$PROJECT_DIR$/src/components/Jumbotron.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/TargetHoop.js" afterPath="$PROJECT_DIR$/src/components/TargetHoop.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +24,8 @@
       <file leaf-file-name="HoopColumn.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/HoopColumn.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="21" column="53" lean-forward="false" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+            <state relative-caret-position="300">
+              <caret line="14" column="66" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="66" />
               <folding>
                 <element signature="e#41#67#0" expanded="true" />
               </folding>
@@ -65,10 +58,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TargetHoop.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TargetHoop.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/TargetHoop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
+            <state relative-caret-position="-1100">
               <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
               <folding>
                 <element signature="e#63#104#0" expanded="true" />
@@ -79,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Basketball.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Basketball.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Basketball.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+            <state relative-caret-position="489">
+              <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
               <folding>
                 <element signature="e#62#87#0" expanded="true" />
               </folding>
@@ -159,15 +152,15 @@
         <option value="$PROJECT_DIR$/src/components/Constants/ProjectConstants.js" />
         <option value="$PROJECT_DIR$/src/components/Constants/Constants.js" />
         <option value="$PROJECT_DIR$/src/components/Constants/SquadStreamConstants/SquadStreamConstants.js" />
-        <option value="$PROJECT_DIR$/src/components/HoopColumn.js" />
         <option value="$PROJECT_DIR$/src/components/CustomDragLayer.js" />
         <option value="$PROJECT_DIR$/src/components/Jumbotron.css" />
         <option value="$PROJECT_DIR$/src/components/Jumbotron.js" />
         <option value="$PROJECT_DIR$/src/components/Header.js" />
         <option value="$PROJECT_DIR$/src/components/Hoop.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/Basketball.js" />
         <option value="$PROJECT_DIR$/src/components/TargetHoop.js" />
+        <option value="$PROJECT_DIR$/src/components/HoopColumn.js" />
+        <option value="$PROJECT_DIR$/src/components/Basketball.js" />
       </list>
     </option>
   </component>
@@ -346,12 +339,12 @@
       <option name="presentableId" value="Default" />
       <updated>1483303371009</updated>
       <workItem from="1483303372366" duration="1092000" />
-      <workItem from="1483486880673" duration="112494000" />
+      <workItem from="1483486880673" duration="113628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113586000" />
+    <option name="totallyTimeSpent" value="114720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -636,26 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HoopColumn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="21" column="53" lean-forward="false" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-          <folding>
-            <element signature="e#41#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Jumbotron.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding>
-            <element signature="e#41#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -677,24 +650,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Basketball.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Jumbotron.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="525">
+          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
           <folding>
-            <element signature="e#62#87#0" expanded="true" />
+            <element signature="e#41#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HoopColumn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="14" column="66" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="66" />
+          <folding>
+            <element signature="e#41#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TargetHoop.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="-1100">
           <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding>
             <element signature="e#63#104#0" expanded="true" />
             <element signature="e#283#331#0" expanded="true" />
             <marker date="1484281814543" expanded="true" signature="76:90" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Basketball.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <element signature="e#62#87#0" expanded="true" />
           </folding>
         </state>
       </provider>
