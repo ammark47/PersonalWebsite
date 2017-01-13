@@ -10,12 +10,21 @@ import CustomDragLayer from './CustomDragLayer'
 
 
 const ImageExampleCircular = () => (
-    <div  className="ui stackable grid" >
-        <div className="sixteen wide column background">
-            <Basketball/>
-            <CustomDragLayer isDragging=""/>
+    <div  className="background" >
+        <div className="sixteen wide column jumbotopbuffer">
         </div>
-
+        <div className="">
+            <div className="ui equal width grid">
+                <div className="ui equal width row ">
+                    <div className="ui column"/>
+                    <div className="ui column">
+                        <Basketball/>
+                        <CustomDragLayer isDragging=""/>
+                    </div>
+                    <div className="ui column"/>
+                </div>
+            </div>
+        </div>
     </div>
 );
 

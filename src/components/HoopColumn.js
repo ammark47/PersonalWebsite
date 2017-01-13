@@ -19,6 +19,7 @@ class HoopColumn extends React.Component {
                           projectdate={SquadStreamInfo.DATE}
                           projecttools={SquadStreamInfo.TOOLS}
                           projectdescript={SquadStreamInfo.DESCRIPT}
+                          droptargetname="squadstream"
                     />
                     <Hoop isOver=""/>
                     <Hoop isOver=""/>

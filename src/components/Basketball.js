@@ -1,6 +1,7 @@
 /**
  * Created by ammar on 1/8/2017.
  */
+/* eslint-disable */
 import React from 'react'
 import { Image } from 'semantic-ui-react'
 import { PropTypes } from 'react';
@@ -14,7 +15,11 @@ const ballSource = {
     beginDrag(props) {
 
         return { };
+    },
+    endDrag(props, monitor, component) {
+        // console.log("end drag " + monitor.didDrop());
     }
+
 };
 
 function getStyles(props) {
@@ -55,7 +60,7 @@ function collect(connect, monitor) {
         const { connectDragSource, isDragging } = this.props;
         return connectDragSource(
             <div style={getStyles(this.props)}>
-                <Image src={basketball}  size='large' shape='circular'  centered/>
+                <Image src={basketball}  size='medium' shape='circular'  centered/>
             </div>
         );
     }
@@ -63,7 +68,7 @@ function collect(connect, monitor) {
 
 Basketball.propTypes = {
     connectDragSource: PropTypes.func.isRequired,
-    isDragging: PropTypes.bool.isRequired,
+    isDragging: PropTypes.bool.isRequired
 
 };
 

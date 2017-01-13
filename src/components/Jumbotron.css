@@ -4,3 +4,7 @@
     background-size: cover;
     background-attachment: fixed;
 }
+
+.jumbotopbuffer {
+    height: 15em
+}
