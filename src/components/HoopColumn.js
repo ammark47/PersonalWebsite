@@ -4,7 +4,9 @@
 import React from 'react';
 import {  Card } from 'semantic-ui-react'
 import Hoop from './Hoop';
-import  SquadStreamInfo  from './Constants/SquadStreamConstants/SquadStreamConstants';
+import  SquadStreamInfo  from './Constants/SquadStreamConstants';
+import GithubInfo from './Constants/GithubConstants';
+import ResumeInfo from './Constants/ResumeConstants'
 
 
 
@@ -21,8 +23,18 @@ class HoopColumn extends React.Component {
                           projectdescript={SquadStreamInfo.DESCRIPT}
                           droptargetname="squadstream"
                     />
-                    <Hoop isOver=""/>
-                    <Hoop isOver=""/>
+                    <Hoop isOver=""
+                          projectname={GithubInfo.NAME}
+                          projectdate={GithubInfo.DATE}
+                          projecttools={GithubInfo.TOOLS}
+                          projectdescript={GithubInfo.DESCRIPT}
+                          droptargetname="github"/>
+                    <Hoop isOver=""
+                          projectname={ResumeInfo.NAME}
+                          projectdate={ResumeInfo.DATE}
+                          projecttools={ResumeInfo.TOOLS}
+                          projectdescript={ResumeInfo.DESCRIPT}
+                          droptargetname="github"/>
                 </Card.Group>
             </div>
         );

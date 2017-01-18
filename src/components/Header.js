@@ -8,11 +8,14 @@ import './Header.css';
 class HeaderContainer extends React.Component {
     render() {
         return (
-        <Segment clearing>
-            <Header as='h2' size="huge" textAlign="center">
-                Ammar Karim
-            </Header>
-        </Segment>
+            <div className="ui clearing segment">
+                <h3 className="ui left floated header" id="left">
+                    Ammar Karim
+                </h3>
+                <h3 className="ui right floated header" id="right">
+                    Right
+                </h3>
+            </div>
         )
     }
 }

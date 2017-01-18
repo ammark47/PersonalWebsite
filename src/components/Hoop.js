@@ -7,34 +7,52 @@ import TargetHoop from './TargetHoop'
 import ReactDOM from 'react-dom';
 
 class Hoop extends React.Component {
-    constructor (props) {
-        super(props);
-        this.state = {
-            hoopRect: {}
-        }
+    state = {
+        rect: {},
+        offsetY: 0
     }
 
     componentDidMount() {
-        const scrollTop = window.pageYOffset;
-        var hoopRect = ReactDOM.findDOMNode(this.refs.test).getBoundingClientRect();
-        // console.log(hoopRect);
-        this.setState({
-            hoopRect: hoopRect,
-            hoopRectTop: (ReactDOM.findDOMNode(this.refs.hoop).getBoundingClientRect().top + scrollTop)
-        });
+
+        const { documentElement, body } = document;
+
+        //remember: window.innerHeight and window.pageYOffset are in the global
+        //scope as innerHeight and pageYOffset anyway, because window is the global object.
+
+        const scrollTop = pageYOffset || documentElement.scrollTop || body.scrollTop;
+
+        const rect = ReactDOM
+            .findDOMNode(this.targetHoopRef)
+            .getBoundingClientRect();
+
+
+        // const offsetY = rect.top + scrollTop + pageYOffset;
+        const offsetY = 0;
+        this.setState({ rect, offsetY });
 
     }
 
+    componentDidUpdate() {
+        const rect = ReactDOM
+            .findDOMNode(this.targetHoopRef)
+            .getBoundingClientRect();
+
+        // console.log(rect);
+    }
+
+
+
     render() {
         const { projectname, projectdate, projecttools, projectdescript, droptargetname } = this.props;
+        const { rect, offsetY } = this.state;
         return (
                 <Card className="column" id="hoop" ref="test">
                     <TargetHoop isOver=""
                                 projectname={projectname}
                                 droptargetname={droptargetname}
-                                cardRect={this.state.hoopRect}
-                                cardRectTop={this.state.hoopRectTop}
-                                ref="hoop"/>
+                                cardRect={rect}
+                                offsetY={offsetY}
+                                ref={ref => this.targetHoopRef = ref} />
                     <Card.Content>
                         <Card.Header>
                             {projectname}

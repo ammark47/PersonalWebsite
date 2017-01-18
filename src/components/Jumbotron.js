@@ -9,24 +9,31 @@ import CustomDragLayer from './CustomDragLayer'
 
 
 
-const ImageExampleCircular = () => (
-    <div  className="background" >
-        <div className="sixteen wide column jumbotopbuffer">
-        </div>
-        <div className="">
-            <div className="ui equal width grid">
-                <div className="ui equal width row ">
-                    <div className="ui column"/>
-                    <div className="ui column">
-                        <Basketball/>
-                        <CustomDragLayer isDragging=""/>
+class Jumbotron extends React.Component {
+
+
+    render() {
+        return (
+            <div className="background">
+                <div className="sixteen wide column jumbotopbuffer">
+                </div>
+                <div className="">
+                    <div className="ui equal width grid">
+                        <div className="ui equal width row ">
+                            <div className="ui column"/>
+                            <div className="ui column">
+                                <Basketball/>
+                                <CustomDragLayer isDragging=""/>
+                            </div>
+                            <div className="ui column"/>
+                        </div>
                     </div>
-                    <div className="ui column"/>
                 </div>
             </div>
-        </div>
-    </div>
-);
+        )
+        ;
+    }
+}
 
 
-export default ImageExampleCircular
+export default Jumbotron

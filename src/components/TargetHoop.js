@@ -23,6 +23,11 @@ const hoopTarget = {
     drop(props, monitor) {
         //this will fire if the ball goes through the hoop
         //transition to the appropriate link here
+        console.log("hello");
+        if (monitor.didDrop()){
+            console.log("dropped");
+            return true;
+        }
     }
 };
 
@@ -35,22 +40,29 @@ function canDropOnHoop(mousePosition, componentPosition, hoopRectTop) {
     const rightRim = (right - ((right-left) / 4)) - 30;
 
     const middleRim = (componentPosition.top - componentPosition.bottom) / 2;
-    // console.log("top " + componentPosition.top);
-    // console.log("bottom " + componentPosition.bottom);
 
-    const scrollTop = window.pageYOffset ;
+    const windowHeight = window.innerHeight ;
+    const scrolled = window.scrollY;
 
-    // console.log(mousePosition.y, scrollTop, componentPosition.top);
-    // console.log(hoopRectTop);
-    // console.log("target top " + componentPosition.top);
-    // console.log("windowtop " + scrollTop);
-    // console.log(componentPosition);
+    var rimTop = componentPosition.top;
 
-    if (mousePosition.x > leftRim && mousePosition.x < rightRim){
-        return true;
+    var rimBottom = (componentPosition.height  * .53) + rimTop;
+
+
+    var modifiedMousePosition = mousePosition.y + scrolled;
+
+
+    if (componentPosition.top < windowHeight){
+        rimTop = windowHeight + (windowHeight * .05);
+        modifiedMousePosition = mousePosition.y + scrolled;
+        rimBottom = windowHeight * 1.5;
+
     }
-    // console.log("mouse " + mousePosition.x, "leftrim " + leftRim, "rightRim " + rightRim);
-    return false;
+
+    return (mousePosition.x > leftRim && mousePosition.x < rightRim &&
+        modifiedMousePosition < rimBottom && modifiedMousePosition > rimTop);
+
+
 }
 
 function collect(connect, monitor) {
@@ -62,30 +74,14 @@ function collect(connect, monitor) {
 }
 
 class TargetHoop extends React.Component {
-    constructor (props) {
-        super(props);
-        this.state = {
-            hoopRect: {}
-        }
-    }
-
-
-    componentDidMount() {
-        this.setState({
-            hoopRect: ReactDOM.findDOMNode(this.refs.hoop).getBoundingClientRect()
-        });
-
-    }
 
     render() {
 
         const {connectDropTarget} = this.props;
 
-        // console.log(this.state.hoopRect);
-
         return connectDropTarget(
             <div>
-                <div ref="hoop">
+                <div>
                  <Image src={basketball_hoop_gif}/>
                 </div>
             </div>

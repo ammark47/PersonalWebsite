@@ -6,3 +6,11 @@
     font-size: 4em;
 }
 
+.left {
+    font-size: 2.8em !important;
+}
+
+.right {
+    margin-top: .9em !important;
+    margin-bottom: .1em !important;
+}

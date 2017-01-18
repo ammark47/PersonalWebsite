@@ -74,7 +74,7 @@ function collect(connect, monitor) {
     }
 
     test(){
-        console.log("hello");
+
     }
 
     render(){
