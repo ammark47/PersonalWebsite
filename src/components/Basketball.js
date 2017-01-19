@@ -5,7 +5,7 @@
 import React from 'react'
 import { Image } from 'semantic-ui-react'
 import { PropTypes } from 'react';
-import basketball from './images/basketball1.jpg'
+import basketball from './images/basketball_transparent.png'
 import ItemTypes from './Constants/Constants';
 import Scroll from 'react-scroll';
 import { DragSource } from 'react-dnd';
@@ -81,7 +81,7 @@ function collect(connect, monitor) {
         const { connectDragSource, isDragging } = this.props;
         return connectDragSource(
             <div style={getStyles(this.props)}>
-                <Image src={basketball}  size='medium' shape='circular'  centered/>
+                <Image src={basketball}  size='small' shape='circular'  centered/>
             </div>
         );
     }

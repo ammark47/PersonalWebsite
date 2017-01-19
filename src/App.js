@@ -6,7 +6,7 @@ import Jumbotron from './components/Jumbotron';
 import CardExampleGroups from './components/HoopColumn'
 import HTML5Backend from 'react-dnd-html5-backend';
 import { DragDropContext } from 'react-dnd';
-import ReactDOM from 'react-dom';
+
 
 
 class App extends React.Component {

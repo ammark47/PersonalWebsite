@@ -5,7 +5,7 @@ import React, { PropTypes } from 'react';
 import ItemTypes from './Constants/Constants';
 import { Image } from 'semantic-ui-react'
 import { DragLayer } from 'react-dnd';
-import dragged_basketball from './images/dragged_basketball1.jpeg'
+import dragged_basketball from './images/dragged_basketbal2.png'
 
 const layerStyles = {
     position: 'fixed',

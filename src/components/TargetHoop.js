@@ -4,10 +4,9 @@
 /* eslint-disable */
 import React, { PropTypes } from 'react';
 import {  Image } from 'semantic-ui-react'
-// import basketball_hoop from './images/basketball_hoop.jpeg'
+import basketball_hoop from './images/basketball_hoop.jpeg'
 // import blue_basketball_hoop from './images/basketball_hoop_blue.gif'
 import  ItemTypes  from './Constants/Constants';
-import ReactDOM from 'react-dom';
 import basketball_hoop_gif from './images/basketballgifbigger.gif'
 
 import { DropTarget } from 'react-dnd';
@@ -20,12 +19,18 @@ const hoopTarget = {
         return canDropOnHoop(clientOffset, componentRect, hoopRectTop);
     },
 
-    drop(props, monitor) {
+    drop(props, monitor, component) {
         //this will fire if the ball goes through the hoop
         //transition to the appropriate link here
-        console.log("hello");
+        // console.log("hello");
+        const hoopImage = {basketball_hoop};
+        component.setState({ hoopImage });
+        component.forceUpdate();
+        
+
         if (monitor.didDrop()){
             console.log("dropped");
+            console.log(component);
             return true;
         }
     }
@@ -74,15 +79,24 @@ function collect(connect, monitor) {
 }
 
 class TargetHoop extends React.Component {
+    state = {
+        hoopImage : ""
+    };
+
+    componentDidMount() {
+        const hoopImage = {basketball_hoop_gif};
+        this.setState({ hoopImage })
+    }
 
     render() {
-
+        const { hoopImage } = this.state;
         const {connectDropTarget} = this.props;
 
+        const basketballKey = hoopImage[Object.keys(hoopImage)[0]];
         return connectDropTarget(
             <div>
                 <div>
-                 <Image src={basketball_hoop_gif}/>
+                 <Image src={basketballKey}/>
                 </div>
             </div>
         );

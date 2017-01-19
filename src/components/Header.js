@@ -2,7 +2,6 @@
  * Created by ammar on 1/3/2017.
  */
 import React  from 'react';
-import { Header, Segment } from 'semantic-ui-react'
 import './Header.css';
 import Mailto from 'react-mailto';
 
@@ -21,10 +20,6 @@ class HeaderContainer extends React.Component {
                     </a>
                 </h3>
                 <h3 className="ui right floated header rightFloater">
-                    {/*<a className="ui link" href="">*/}
-                        {/*<i className="mail icon"></i>*/}
-                        {/*Contact Me*/}
-                    {/*</a>*/}
                     <Mailto email="me@ammarkarim.com" obfuscate={true}>
                         <i className="mail icon"></i>
                         Contact Me

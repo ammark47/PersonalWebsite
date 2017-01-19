@@ -8,50 +8,29 @@ import ReactDOM from 'react-dom';
 
 class Hoop extends React.Component {
     state = {
-        rect: {},
-        offsetY: 0
-    }
+        rect: {}
+    };
 
     componentDidMount() {
 
-        const { documentElement, body } = document;
-
-        //remember: window.innerHeight and window.pageYOffset are in the global
-        //scope as innerHeight and pageYOffset anyway, because window is the global object.
-
-        const scrollTop = pageYOffset || documentElement.scrollTop || body.scrollTop;
-
         const rect = ReactDOM
             .findDOMNode(this.targetHoopRef)
             .getBoundingClientRect();
 
-
-        // const offsetY = rect.top + scrollTop + pageYOffset;
-        const offsetY = 0;
-        this.setState({ rect, offsetY });
+        this.setState({ rect });
 
     }
-
-    componentDidUpdate() {
-        const rect = ReactDOM
-            .findDOMNode(this.targetHoopRef)
-            .getBoundingClientRect();
-
-        // console.log(rect);
-    }
-
 
 
     render() {
         const { projectname, projectdate, projecttools, projectdescript, droptargetname } = this.props;
-        const { rect, offsetY } = this.state;
+        const { rect } = this.state;
         return (
                 <Card className="column" id="hoop" ref="test">
                     <TargetHoop isOver=""
                                 projectname={projectname}
                                 droptargetname={droptargetname}
                                 cardRect={rect}
-                                offsetY={offsetY}
                                 ref={ref => this.targetHoopRef = ref} />
                     <Card.Content>
                         <Card.Header>
