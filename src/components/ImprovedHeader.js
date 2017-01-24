@@ -4,8 +4,6 @@
 import React  from 'react';
 import { Button, Header, Segment } from 'semantic-ui-react'
 import './Header.css';
-import Mailto from 'react-mailto';
-import ContactButton from './ContactButton'
 import ContactModal from './ContactModal'
 
 class ImprovedHeader extends React.Component {

@@ -4,13 +4,7 @@
 /* eslint-disable */
 import React, { PropTypes } from 'react';
 import {  Image } from 'semantic-ui-react'
-import ResumeModal from './ResumeModal'
-import basketball_hoop from './images/basketball_hoop.jpeg'
-// import blue_basketball_hoop from './images/basketball_hoop_blue.gif'
 import  ItemTypes  from './Constants/Constants';
-import basketball_hoop_gif from './images/basketballgifbigger.gif'
-import squadstream_static_backboard from './images/squadstream_basketball_image.gif'
-
 import { DropTarget } from 'react-dnd';
 
 const hoopTarget = {

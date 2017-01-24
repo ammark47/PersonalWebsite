@@ -2,7 +2,7 @@
  * Created by ammar on 1/24/2017.
  */
 import React  from 'react'
-import { Button, Checkbox, Form, Input, Message, Radio, Select, TextArea } from 'semantic-ui-react'
+import { Button, Form, Message, TextArea } from 'semantic-ui-react'
 
 
 class ContactForm extends React.Component {

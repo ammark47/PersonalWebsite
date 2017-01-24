@@ -1,7 +1,5 @@
 import React from 'react';
-import basketball from './components/images/basketball.png'
 import './App.css';
-import HeaderContainer from './components/Header';
 import Jumbotron from './components/Jumbotron';
 import CardExampleGroups from './components/HoopColumn'
 import HTML5Backend from 'react-dnd-html5-backend';
@@ -14,7 +12,7 @@ class App extends React.Component {
     return (
         <div>
           <ImprovedHeader/>
-          <Jumbotron basketballimage={basketball}/>
+          <Jumbotron />
           <div id="hoops">
             <CardExampleGroups/>
           </div>

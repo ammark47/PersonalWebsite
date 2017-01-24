@@ -3,7 +3,6 @@
  */
 import React from 'react';
 import { Card } from 'semantic-ui-react'
-import { Button, Header, Icon, Modal } from 'semantic-ui-react'
 import TargetHoop from './TargetHoop'
 import ReactDOM from 'react-dom';
 
