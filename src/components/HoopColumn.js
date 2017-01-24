@@ -8,6 +8,14 @@ import  SquadStreamInfo  from './Constants/SquadStreamConstants';
 import GithubInfo from './Constants/GithubConstants';
 import ResumeInfo from './Constants/ResumeConstants'
 
+import squadstream_static_backboard from './images/squadstream_basketball_image.gif'
+import squadstream_gif from './images/squadstreambasketballgif.gif'
+
+import github_static_background from './images/github_static_background.gif'
+import github_gif from './images/basketball_github.gif'
+
+import resume_static from './images/resume_static_background.gif'
+import resume_gif from './images/resume_gif.gif'
 
 
 class HoopColumn extends React.Component {
@@ -21,6 +29,9 @@ class HoopColumn extends React.Component {
                           projectdate={SquadStreamInfo.DATE}
                           projecttools={SquadStreamInfo.TOOLS}
                           projectdescript={SquadStreamInfo.DESCRIPT}
+                          projectbackground={{squadstream_static_backboard}}
+                          projectgif={{squadstream_gif}}
+                          projecturl={SquadStreamInfo.URL}
                           droptargetname="squadstream"
                     />
                     <Hoop isOver=""
@@ -28,12 +39,18 @@ class HoopColumn extends React.Component {
                           projectdate={GithubInfo.DATE}
                           projecttools={GithubInfo.TOOLS}
                           projectdescript={GithubInfo.DESCRIPT}
+                          projectbackground={{github_static_background}}
+                          projectgif={{github_gif}}
+                          projecturl={GithubInfo.URL}
                           droptargetname="github"/>
                     <Hoop isOver=""
                           projectname={ResumeInfo.NAME}
                           projectdate={ResumeInfo.DATE}
                           projecttools={ResumeInfo.TOOLS}
                           projectdescript={ResumeInfo.DESCRIPT}
+                          projectgif={{resume_gif}}
+                          projectbackground={{resume_static}}
+                          projecturl={ResumeInfo.URL}
                           droptargetname="github"/>
                 </Card.Group>
             </div>

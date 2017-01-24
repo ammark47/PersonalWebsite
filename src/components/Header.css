@@ -11,10 +11,20 @@
 }
 
 .rightFloater {
-    margin-top: .9em !important;
+    margin-top: 1.4em !important;
     /*margin-bottom: .1em !important;*/
 }
 
 #ceiling {
     padding-bottom: .1em;
+}
+
+#segment {
+    border-radius: 0;
+    background: black;
+}
+
+#name {
+    font-size: 4em;
+    color: #54C8FF;
 }

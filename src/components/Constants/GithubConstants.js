@@ -3,7 +3,8 @@
  */
 export default {
     NAME: 'Github Profile',
-    DATE: 'Launched January 2016',
+    DATE: 'Opened June 2015',
     TOOLS: 'Tools Used: --',
+    URL: "http://www.github.com/ammark47",
     DESCRIPT: '- Find repositories for my previous projects and this website'
 };

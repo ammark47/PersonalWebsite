@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import { Card } from 'semantic-ui-react'
+import { Button, Header, Icon, Modal } from 'semantic-ui-react'
 import TargetHoop from './TargetHoop'
 import ReactDOM from 'react-dom';
 
@@ -23,13 +24,17 @@ class Hoop extends React.Component {
 
 
     render() {
-        const { projectname, projectdate, projecttools, projectdescript, droptargetname } = this.props;
+        const { projectname, projectdate, projecttools, projectdescript,
+                droptargetname, projectbackground, projectgif, projecturl } = this.props;
         const { rect } = this.state;
         return (
-                <Card className="column" id="hoop" ref="test">
+                <Card className="column" id="hoop" ref="test" href={projecturl}>
                     <TargetHoop isOver=""
                                 projectname={projectname}
                                 droptargetname={droptargetname}
+                                backgroundimage={{projectbackground}}
+                                projectgif={{projectgif}}
+                                projecturl={projecturl}
                                 cardRect={rect}
                                 ref={ref => this.targetHoopRef = ref} />
                     <Card.Content>
@@ -46,9 +51,9 @@ class Hoop extends React.Component {
                         </Card.Description>
                     </Card.Content>
                     <Card.Content extra>
-                        <a>
+
                             {projecttools}
-                        </a>
+
                     </Card.Content>
                 </Card>
         );

@@ -5,6 +5,7 @@ export default {
     NAME: 'Squad Stream',
     DATE: 'Launched January 2016',
     TOOLS: 'Tools Used: React.JS, Node.JS, Firebase',
+    URL: "http://www.squadstream.com",
     DESCRIPT: '- Get the latest news for your favorite NBA team, realtime!    ' +
     '- Updates without refresh and get notifs about breaking news'
 };

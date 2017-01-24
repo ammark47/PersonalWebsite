@@ -4,10 +4,12 @@
 /* eslint-disable */
 import React, { PropTypes } from 'react';
 import {  Image } from 'semantic-ui-react'
+import ResumeModal from './ResumeModal'
 import basketball_hoop from './images/basketball_hoop.jpeg'
 // import blue_basketball_hoop from './images/basketball_hoop_blue.gif'
 import  ItemTypes  from './Constants/Constants';
 import basketball_hoop_gif from './images/basketballgifbigger.gif'
+import squadstream_static_backboard from './images/squadstream_basketball_image.gif'
 
 import { DropTarget } from 'react-dnd';
 
@@ -22,11 +24,23 @@ const hoopTarget = {
     drop(props, monitor, component) {
         //this will fire if the ball goes through the hoop
         //transition to the appropriate link here
-        // console.log("hello");
-        const hoopImage = {basketball_hoop};
+        console.log("hello");
+        const basketballKey = props.projectgif[Object.keys(props.projectgif)[0]];
+        const hoopImage = basketballKey;
+
+        console.log("setting state");
+
         component.setState({ hoopImage });
-        component.forceUpdate();
-        
+
+        // switch (props.projectname) {
+        //     case "Squad Stream" || "Github Profile":
+        //         setTimeout(function() { window.location.href = props.projecturl; }.bind(component), 2000);
+        //     case "Resume":
+        //         setTimeout(function() { component.setState({isModalOpen: true}); }.bind(component), 2000);
+        //         break;
+        // }
+
+        setTimeout(function() { window.location.href = props.projecturl; }.bind(component), 2000);
 
         if (monitor.didDrop()){
             console.log("dropped");
@@ -46,7 +60,7 @@ function canDropOnHoop(mousePosition, componentPosition, hoopRectTop) {
 
     const middleRim = (componentPosition.top - componentPosition.bottom) / 2;
 
-    const windowHeight = window.innerHeight ;
+    var windowHeight = window.innerHeight ;
     const scrolled = window.scrollY;
 
     var rimTop = componentPosition.top;
@@ -57,12 +71,21 @@ function canDropOnHoop(mousePosition, componentPosition, hoopRectTop) {
     var modifiedMousePosition = mousePosition.y + scrolled;
 
 
-    if (componentPosition.top < windowHeight){
+    // if (componentPosition.top < windowHeight){
         rimTop = windowHeight + (windowHeight * .05);
         modifiedMousePosition = mousePosition.y + scrolled;
         rimBottom = windowHeight * 1.5;
+        console.log("here")
+    // }
 
-    }
+    console.log("window height " + windowHeight)
+    console.log("mouse " + modifiedMousePosition)
+    console.log("rimbottom " + rimBottom);
+    console.log("height " + componentPosition.height)
+    console.log(componentPosition)
+    // console.log(modifiedMousePosition > rimTop)
+    // console.log(mousePosition.x > leftRim && mousePosition.x < rightRim &&
+    //     modifiedMousePosition < rimBottom && modifiedMousePosition > rimTop)
 
     return (mousePosition.x > leftRim && mousePosition.x < rightRim &&
         modifiedMousePosition < rimBottom && modifiedMousePosition > rimTop);
@@ -80,16 +103,20 @@ function collect(connect, monitor) {
 
 class TargetHoop extends React.Component {
     state = {
-        hoopImage : ""
+        hoopImage : "",
+        isModalOpen: false
     };
 
     componentDidMount() {
-        const hoopImage = {basketball_hoop_gif};
+
+        const basketballKey = this.props.backgroundimage[Object.keys(this.props.backgroundimage)[0]];
+        const hoopImage = basketballKey;
+
         this.setState({ hoopImage })
     }
 
     render() {
-        const { hoopImage } = this.state;
+        const { hoopImage, isModalOpen } = this.state;
         const {connectDropTarget} = this.props;
 
         const basketballKey = hoopImage[Object.keys(hoopImage)[0]];
