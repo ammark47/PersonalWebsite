@@ -1,0 +1,19 @@
+.background {
+    background-image: url(images/gym_background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.jumbotopbuffer {
+    height: 26em;
+    width: 100% !important;
+}
+
+.ui.header {
+    color: #4183C4;
+}
+
+#grabInstructs {
+
+}

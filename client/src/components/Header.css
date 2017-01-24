@@ -1,0 +1,30 @@
+.ui.segment:first-child {
+    margin-bottom: 0;
+}
+
+.ui.huge.header {
+    font-size: 4em;
+}
+
+#leftFloater {
+    font-size: 2.8em !important;
+}
+
+.rightFloater {
+    margin-top: 1.4em !important;
+    /*margin-bottom: .1em !important;*/
+}
+
+#ceiling {
+    padding-bottom: .1em;
+}
+
+#segment {
+    border-radius: 0;
+    background: black;
+}
+
+#name {
+    font-size: 4em;
+    color: #54C8FF;
+}
