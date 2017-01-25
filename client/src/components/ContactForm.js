@@ -15,7 +15,7 @@ class ContactForm extends React.Component {
     handleSubmit = (e, { formData }) => {
         e.preventDefault()
         const didSubmit = true
-        fetch('/test-page', {
+        fetch('/', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -37,6 +37,9 @@ class ContactForm extends React.Component {
                 </Form.Group>
                 <Form.Group widths='2'>
                     <Form.Input name="Email" label='Email' placeholder='Email' required />
+                </Form.Group>
+                <Form.Group widths='2'>
+                    <Form.Input name="Subject" label='Subject' placeholder='Subject' />
                 </Form.Group>
                 <Form.TextArea name='Message' label='Message' placeholder="How's life?" rows='3' required />
 
