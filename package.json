@@ -1,0 +1,27 @@
+{
+  "name": "personalwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "nodemailer": "^2.7.2",
+    "sendmail": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ammark47/PersonalWebsite.git"
+  },
+  "author": "Ammar Karim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ammark47/PersonalWebsite/issues"
+  },
+  "homepage": "https://github.com/ammark47/PersonalWebsite#readme"
+}
