@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a2891e0-b68e-4352-9693-3f83b9649904" name="Default" comment="" />
+    <list default="true" id="3a2891e0-b68e-4352-9693-3f83b9649904" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -21,11 +23,21 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+            <state relative-caret-position="694">
+              <caret line="55" column="3" lean-forward="false" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -249,18 +261,18 @@
       <workItem from="1484437452714" duration="16275000" />
       <workItem from="1484516585024" duration="64994000" />
       <workItem from="1485289954363" duration="1111000" />
-      <workItem from="1485291104565" duration="12616000" />
+      <workItem from="1485291104565" duration="13170000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213073000" />
+    <option name="totallyTimeSpent" value="213627000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -329,7 +341,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/Basketball.js" />
     <entry file="file://$PROJECT_DIR$/src/components/ContactButton.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Jumbotron.css" />
-    <entry file="file://$PROJECT_DIR$/package.json" />
     <entry file="file://$PROJECT_DIR$/src/components/Constants/ResumeConstants.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Hoop.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Jumbotron.js" />
@@ -349,10 +360,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        <state relative-caret-position="694">
+          <caret line="55" column="3" lean-forward="false" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>

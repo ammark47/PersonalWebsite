@@ -9,6 +9,8 @@ const sendmail = require('sendmail')();
 
 var app = express()
 
+var port = process.env.PORT || 8080;
+
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
     extended: true
@@ -49,4 +51,6 @@ app.post('/', function(req, res) {
 
 });
 
-app.listen(9000);
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
